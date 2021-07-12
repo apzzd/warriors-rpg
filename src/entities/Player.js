@@ -12,7 +12,7 @@ class Player extends TileSprite {
         this.controls = controls
         this.anchor = { x: 0, y: 0 }
         const anims = this.anims
-        anims.add("walk", [{x: 0.25, y: 0.5}, {x: 1.75, y: 0.5}, {x:3.25 , y:0.5}], 0.1)
+        anims.add("walk", [{x: 0.25, y: 0.5}, {x: 1.75, y: 0.5}, {x:3.25 , y:0.5}, {x: 1.75, y: 0.5}], 0.12)
         anims.add("idle", [{x: 0, y:0}, {x: 4, y: 0}, {x: 4, y: 1}, {x:4, y:0}], 0.1)
         
         anims.play("walk")
