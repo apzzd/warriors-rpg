@@ -5,7 +5,7 @@ const { TileMap, Texture, math } = pop;
 class Level extends TileMap {
     constructor(w, h) {
 
-        const texture = new Texture("res/tiles.png")
+        const texture = new Texture("res/Warriors-RPG/ground.png")
         const tileSize = 32
         const mapW = Math.floor(w/tileSize)
         const mapH = Math.floor(h/tileSize)
@@ -14,16 +14,13 @@ class Level extends TileMap {
 
         for (let y = 0; y < mapH; y++) {
             for (let x = 0; x < mapW ; x++) {
-                if (x == 0  || x == mapW - 1) {
-                    tileval = { x:1, y: 1 }
-                } else if ( y == 0) {
-                    tileval = { x: 4, y: 1 }
-                } else if ( y == mapH - 1) {
-                    tileval = { x: 2, y: 1 }
-                } else {
-                    tileval = { x: math.rand(1, 4), y: 0 }
+
+                tileval = {x: 0, y: 0}
+
+                if (x == 1) {
+                    tileval = {x: 3, y: 0}
                 }
-                
+
                 level.push(tileval)
             }
         }
