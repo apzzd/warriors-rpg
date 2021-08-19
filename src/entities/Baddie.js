@@ -1,17 +1,14 @@
 import pop from "../../pop/index.js"
 const {TileSprite, Texture} = pop
-const texture = new Texture("../../res/baddie-walk.png")
+const texture = new Texture("../../res/Warriors-RPG/ground.png")
 
 class Baddie extends TileSprite {
-    constructor (xSpeed, ySpeed) {
+    constructor (xSpeed, ySpeed, frame) {
         super(texture, 32, 32)
         this.xSpeed = xSpeed
         this.ySpeed = ySpeed
+        this.frame = frame
     }
-    update (dt) {
-        const {pos, xSpeed, ySpeed} = this
-        pos.x += xSpeed * dt
-        pos.y += ySpeed * dt
-    }
+    
 }
 export default Baddie

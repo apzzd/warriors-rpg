@@ -26,6 +26,7 @@ class Level extends TileMap {
             }
         }
 
+
         // let rand
         // for (let y = 0; y < mapH; y++) {
         //     for (let x = 0; x < mapW ; x++) {
@@ -46,8 +47,7 @@ class Level extends TileMap {
             top: tileSize,
             bottom: h - tileSize * 2
         }
-        this.special = {x: math.rand(1, 50), y: math.rand
-            (1,  50)}
+
     }
     checkGround(pos) {
         const { blank, lastTile, special} = this

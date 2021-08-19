@@ -66,7 +66,7 @@ class Player extends TileSprite {
                 this.anims.play("walkb")
             } else {
                 console.log("idle")
-                this.anims.play("idle")
+                this.anims.stop()
             }
         } 
         pos.x += dir.x * dt * (32/speed)
