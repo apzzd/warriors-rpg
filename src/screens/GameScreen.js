@@ -38,16 +38,6 @@ class GameScreen extends Container {
     addTrees(level) {
         console.log("lev",level)
         const baddies = new Container()
-        for (let i = 1; i < 30; i++) {
-            const b = baddies.add(new Baddie(32*10, 0, {x: 8, y: 0}))
-            b.pos.y = 32 * math.rand(1, 30)
-            b.pos.x = 32 * math.rand(1, 30)
-        }
-        for (let i = 1; i < 10; i++) {
-            const b = baddies.add(new Baddie(32*10, 0, {x: 8, y: 6}))
-            b.pos.y = 32 * math.rand(1, 30)
-            b.pos.x = 32 * math.rand(1, 30)
-        }
 
         return baddies
     }
