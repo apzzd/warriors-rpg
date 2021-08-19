@@ -24,7 +24,6 @@ class GameScreen extends Container {
         this.add(this.camera)
         this.camera.add(this.level)
         this.camera.add(this.baddies)
-        this.camera.add(this.leader)
         this.camera.add(this.Player)
         
     }
