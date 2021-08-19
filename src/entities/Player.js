@@ -20,7 +20,7 @@ class Player extends TileSprite {
 
         anims.play("walkr")
 
-        this.speed = 0.3
+        this.speed = 0.2
         this.dir = {
             x: 1,
             y: 0
