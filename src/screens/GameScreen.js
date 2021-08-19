@@ -19,7 +19,6 @@ class GameScreen extends Container {
             this.Player,
             {w, h},
             {w: this.level.w, h: this.level.h})
-        
 
         this.add(this.camera)
         this.camera.add(this.level)
@@ -39,6 +38,12 @@ class GameScreen extends Container {
     addTrees(level) {
         console.log("lev",level)
         const baddies = new Container()
+        
+        for (let i = 0; i < 10; i++) {
+            const b = baddies.add(new Baddie(32*10, 0, {x: 10, y: 6}, new Texture("res/Warriors-RPG/ground.png")))
+            b.pos.y = 32 * math.rand(1, 50)
+            b.pos.x = 32 * math.rand(1, 50)
+        }
 
         return baddies
     }

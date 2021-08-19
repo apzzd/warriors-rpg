@@ -15,13 +15,7 @@ class Level extends TileMap {
 
         for (let y = 0; y < mapH; y++) {
             for (let x = 0; x < mapW ; x++) {
-
-                tileval = {x: 0, y: math.rand(0, 3)}
-
-                if (x == 0 || x == mapW - 1 || y == 0 || y == mapH - 1) {
-                    tileval = {x: 0, y: 6}
-                }
-
+                tileval = {x: 0, y: 9}
                 level.push(tileval)
             }
         }

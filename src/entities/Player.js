@@ -12,10 +12,10 @@ class Player extends TileSprite {
         this.controls = controls
         this.anchor = { x: 0, y: 0 }
         const anims = this.anims
-        anims.add("walkf", [{x: 0, y: 0}, {x: 1, y: 0}, {x:2 , y:0}], 0.12)
-        anims.add("walkl", [{x: 0, y: 1}, {x: 1, y: 1}, {x:2 , y:1}], 0.12)
-        anims.add("walkr", [{x: 0, y: 2}, {x: 1, y: 2}, {x:2 , y:2}], 0.12)
-        anims.add("walkb", [{x: 0, y: 3}, {x: 1, y: 3}, {x:2 , y:3}], 0.12)
+        anims.add("walkf", [{x: 0, y: 0}, {x: 1, y: 0}, {x:2 , y:0}, {x: 0, y: 0}], 0.1)
+        anims.add("walkl", [{x: 0, y: 1}, {x: 1, y: 1}, {x:2 , y:1}, {x: 0, y: 1}], 0.1)
+        anims.add("walkr", [{x: 0, y: 2}, {x: 1, y: 2}, {x:2 , y:2}, {x: 0, y: 2}], 0.1)
+        anims.add("walkb", [{x: 0, y: 3}, {x: 1, y: 3}, {x:2 , y:3}, {x: 0, y: 3}], 0.1)
         anims.add("idle", [{x: 1, y: 0}], 0.12)
 
         anims.play("walkr")
