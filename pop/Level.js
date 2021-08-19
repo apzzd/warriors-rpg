@@ -6,6 +6,7 @@ class Level extends TileMap {
     constructor(w, h) {
 
         const texture = new Texture("res/Warriors-RPG/ground.png")
+        const trees = new Texture("res/Warriors-RPG/trees2.png")
         const tileSize = 32
         const mapW = Math.floor(w/tileSize)
         const mapH = Math.floor(h/tileSize)
@@ -15,10 +16,10 @@ class Level extends TileMap {
         for (let y = 0; y < mapH; y++) {
             for (let x = 0; x < mapW ; x++) {
 
-                tileval = {x: 0, y: 0}
+                tileval = {x: 0, y: math.rand(0, 3)}
 
-                if (x == 1) {
-                    tileval = {x: 3, y: 0}
+                if (x == 0 || x == mapW - 1 || y == 0 || y == mapH - 1) {
+                    tileval = {x: 0, y: 6}
                 }
 
                 level.push(tileval)
@@ -45,7 +46,8 @@ class Level extends TileMap {
             top: tileSize,
             bottom: h - tileSize * 2
         }
-        this.special = {x: math.rand(1, 50), y: math.rand(1,  50)}
+        this.special = {x: math.rand(1, 50), y: math.rand
+            (1,  50)}
     }
     checkGround(pos) {
         const { blank, lastTile, special} = this
